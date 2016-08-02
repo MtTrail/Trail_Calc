@@ -1,9 +1,5 @@
 # TrailCalc
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/Trail_Calc`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
-
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -22,7 +18,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    require 'trail_calc'
+    
+    openCalcWorkbook("file.ods") do |book|
+      sheet = book.get_sheet("DataSheet")
+      sheet[0,3] = 1
+      ...
+      book.save
+    end
 
 ## Development
 
@@ -32,5 +35,5 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/Trail_Calc.
+Bug reports and pull requests are welcome on GitHub at https://github.com/MtTrail/Trail_Calc.
 
